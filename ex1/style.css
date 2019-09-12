@@ -1,0 +1,53 @@
+/* this defines the helper grid */
+.gridlines {
+  /* change these as you need */
+  --grid-size:50px;
+  --grid-color:pink;
+}
+
+/* anything else you want to do 👇 */
+
+h1 {
+  color:black;
+  font-size:28px;
+  padding: 2px 20px 10px 20px;
+}
+
+h2{
+	font-family: Arial;
+	font-weight: lighter;
+	font-size: 13pt;
+	padding: 0 12px 0 20px;
+}
+
+#image{
+	width: 400px;
+}
+
+#image:hover{
+	opacity: 0.5;
+}
+
+#ip{
+	width: 300px;
+}
+
+
+a:link{
+	color: black;
+
+}
+a:hover {
+	color: red;
+}
+a:visited {
+	color: black;
+
+}
+a: active {
+
+}
+
+#pageTwo{
+	padding: 50px 0px 0 50px;
+}
