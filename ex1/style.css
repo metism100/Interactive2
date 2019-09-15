@@ -33,9 +33,16 @@ h2{
 }
 
 #moon{
-	width: 300px;
+	width: 200px;
+}
+#ba {
+	height: 221px;	
 }
 
+#ba2{
+	height: 221px;
+	padding-left: 10px;
+}
 
 a:link{
 	color: black;
