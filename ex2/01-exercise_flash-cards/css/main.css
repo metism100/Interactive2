@@ -1,0 +1,43 @@
+body{
+	font-family: Arial;
+	font-size: 1em;
+	margin:0;
+	padding:0;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+li{
+	height:200px;
+	width:150px;
+	background-color: hotpink;
+	float: left;
+	margin-left: 10px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	border-radius: 30px;
+	transition: transform 500ms;
+}
+
+body{
+	font-family: Arial;
+	margin:0;
+	padding
+}
+
+a:link, a:visited  {
+	color: white;
+}
+
+li:hover {
+	color: yellow;
+	transform: scale(1.05);
+}
