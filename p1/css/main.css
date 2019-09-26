@@ -1,0 +1,25 @@
+body{
+	font-family: Arial;
+	font-size: 1em;
+	margin:0;
+	padding:0;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+#rectangle{
+    width:500px;
+    height:300px;
+    position:relative;
+    top: 100px;
+    background:tan;
+    transform: scale(0) /*scale it to a smaller size*/
+  	transition: all .5s ease-in-out; 
+}
+
+h1{
+	position: absolute;
+	top: 400px;
+}
