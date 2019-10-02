@@ -1,0 +1,128 @@
+body{
+	font-family: Arial;
+	font-size: 1em;
+	margin:0;
+	padding:0;
+	height: 100vh;
+	/*display: grid;
+	align-items: center;
+	justify-items: center;*/
+}
+
+one{
+	height:400px;
+	width:400px;
+	background-color: #8d87c1;
+	position: absolute;
+	top: 50px;
+	left: 100px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+two{
+	height:400px;
+	width:500px;
+	background-color: #e99837;
+	position: absolute;
+	top: 260px;
+	left: 940px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+three{
+	height:400px;
+	width:600px;
+	background-color: #e69292;
+	position: absolute;
+	top: 345px;
+	left: 310px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+four{
+	height:400px;
+	width:500px;
+	background-color: #368a42;
+	position: absolute;
+	top: 0px;
+	left: 800px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+p {
+	font-size: 30px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p1 {
+	font-size: 35px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p2 {
+	font-size: 55px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p3 {
+	font-size: 40px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+a:link, a:visited  {
+	color: white;
+	opacity: 10%;
+}
+
+one:hover {
+	transform: scale(2.05);
+}
+
+two:hover {
+	color: white;
+	transform: scale(2.05);
+}
+
+three:hover {
+	transform: scale(2.05);
+}
+
+four:hover {
+	transform: scale(2.05);
+}
