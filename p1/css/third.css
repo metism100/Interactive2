@@ -1,0 +1,212 @@
+body{
+	font-family: Arial;
+	font-size: 1em;
+	margin:0;
+	padding:0;
+	height: 100vh;
+	/*display: grid;
+	align-items: center;
+	justify-items: center;*/
+}
+
+one{
+	height:600px;
+	width:550px;
+	background-color: #FF3000;
+	position: absolute;
+	top: 50px;
+	left: 600px;
+	font-size: 30px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+two{
+	height:300px;
+	width:300px;
+	background-color: yellow;
+	position: absolute;
+	top: 450px;
+	left: 1180px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+three{
+	height:300px;
+	width:400px;
+	background-color: #3300FF;
+	position: absolute;
+	top: 50px;
+	left: 180px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+four{
+	height:600px;
+	width:550px;
+	background-color: #CCFF00;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 30px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+five{
+	height:700px;
+	width:1030px;
+	background-color: #00CFFF;
+	position: absolute;
+	top: 0px;
+	left: 500px;
+	font-size: 30px;
+	display: grid;
+	align-items: right;
+	text-align: right;
+	transition: transform 100ms;
+}
+
+six{
+	height:300px;
+	width:500px;
+	background-color: #00FF26;
+	position: absolute;
+	top: 450px;
+	left: 480px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+seven{
+	height:200px;
+	width:500px;
+	background-color: #FF9300;
+	position: absolute;
+	top: -20px;
+	left: 880px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+eight{
+	height:700px;
+	width:1550px;
+	background-color: #FF00D9;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	font-size: 50px;
+	display: grid;
+	align-items: center;
+	text-align: left;
+	transition: transform 100ms;
+}
+
+p {
+	font-size: 80px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p1 {
+	font-size: 35px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p2 {
+	font-size: 50px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p3{
+	font-size: 60px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p4{
+	font-size: 40px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+
+a:link, a:visited  {
+	color: white;
+	opacity: 10%;
+}
+
+one:hover {
+	transform: scale(2.05);
+}
+
+two:hover {
+	color: white;
+	transform: scale(2.05);
+}
+
+three:hover {
+	transform: scale(2.05);
+}
+
+
+four:hover {
+	transform: scale(2.05);
+}
+
+five:hover {
+	transform: scale(2.05);
+}
+
+six:hover {
+	transform: scale(2.05);
+}
+
+seven:hover {
+	transform: scale(2.05);
+}
+
+eight:hover {
+	transform: scale(2.05);
+}
