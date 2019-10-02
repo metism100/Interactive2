@@ -8,18 +8,58 @@ body{
 	align-items: center;
 	justify-items: center;
 }
-
-#rectangle{
-    width:500px;
-    height:300px;
-    position:relative;
-    top: 100px;
-    background:tan;
-    transform: scale(0) /*scale it to a smaller size*/
-  	transition: all .5s ease-in-out; 
+ul{
+	list-style: none;
+	padding: 0;
 }
 
-h1{
-	position: absolute;
-	top: 400px;
+li{
+	height:100px;
+	width:300px;
+	background-color: #dd9bc4;
+	float: left;
+	margin-left: 10px;
+	font-size: 30px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform 100ms;
+}
+
+s{
+	height:200px;
+	width:300px;
+	background-color: blue;
+	float: left;
+	margin-left: 10px;
+	font-size: 60px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	transition: transform;
+}
+
+
+body{
+	font-family: Arial;
+	margin:0;
+	padding
+}
+
+p {
+	font-size: 20px;
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+a:link, a:visited  {
+	color: white;
+}
+
+li:hover {
+	transform: scale(2.05);
 }
