@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html, body {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+
+  <script>setTimeout(function(){window.location.href='buttons.html'},7000);</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+const faces = [];
+const numOfFaces = 125;
+
+function Face(isLast = false) {
+  this.location = createVector(random(width), random(height))
+  this.rotation = random(-QUARTER_PI / 2, QUARTER_PI / 2);
+  this.scalarX = random(20, 30);
+  this.scalarY = random(40, 50);
+  this.zoff = random(0, 200);
+  this.fillColor = isLast ? 255 : 0;
+  this.strokeColor = isLast ? 0 : 255;
+  this.mouthPosition = createVector(random(-5, 5), random(25, 30));
+  this.leftEyePosition = createVector(random(-5, -15), random(-5, -15));
+  this.rightEyePosition = createVector(random(5, 15), random(-5, -15));
+  this.mouthHeight = random(2, 15);
+  this.mouthWidth = random(2, 10);
+  this.leftEyeHeight = random(2, 15);
+  this.leftEyeWidth = random(2, 10);
+  this.rightEyeHeight = random(2, 15);
+  this.rightEyeWidth = random(2, 10);
+  
+  this.draw = () => {
+    push();
+    translate(this.location.x , this.location.y);
+    rotate(this.rotation);
+    fill(this.fillColor);
+    stroke(this.strokeColor);
+    strokeWeight(2);
+    beginShape()
+    this.drawFace()
+    endShape(CLOSE);
+    fill(0);
+    this.drawEyes();
+    pop();
+  }
+  
+  this.update = () => {
+    this.zoff += 0.03;
+  }
+  
+  this.drawFace = () => {
+    for (let i = 0; i < TWO_PI; i += 0.314) {
+      const xoff = map(cos(i), -1 , 1, 0, 1);
+      const yoff = map(sin(i), -1, 1, 0, 1);
+      
+      const rY = map(noise(xoff, yoff, this.zoff), 0, 1, this.scalarY / 2, this.scalarY * 2);
+      const rX = map(noise(xoff, yoff, this.zoff), 0, 1, this.scalarX / 2, this.scalarX * 2);
+      let xx = rX * sin(i);
+      let yy = rY * cos(i);
+      
+      vertex(xx, yy);
+    }
+  }
+  
+  this.drawEyes = () => {
+    if (!isLast) {
+      fill(255);
+    }
+    
+    ellipse(this.leftEyePosition.x, this.leftEyePosition.y, this.leftEyeWidth, this.leftEyeHeight);
+    ellipse(this.rightEyePosition.x, this.rightEyePosition.y, this.rightEyeWidth, this.rightEyeHeight);
+    ellipse(this.mouthPosition.x, this.mouthPosition.y, this.mouthWidth, this.mouthHeight);
+  }
+}
+
+
+function setup() {
+  //150 faces and seed 7 works too but not as performant for obvious reasons
+  randomSeed(12);
+  createCanvas(400, 400);
+  
+  for (let i = 0; i < numOfFaces; i++) {
+    faces.push(new Face(i === numOfFaces - 1));
+  }
+}
+
+function draw() {
+  background(0);
+  
+  for (const face of faces) {
+    face.update();
+    face.draw();
+  }
+}
+</script>
+</body>
+</html>
