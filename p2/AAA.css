@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+main {
+  height: 95vmin;
+  width: 95vmin;
+  display: grid;
+  grid-template-columns: repeat(50, 1fr);
+}
+
+div {
+  font-size: 1.75vmin;
+  line-height: 1;
+  height: 1.75vmin;
+  width: 1.75vmin;
+  transform: scale(2);
+}
