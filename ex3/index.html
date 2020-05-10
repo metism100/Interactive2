@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script src= "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+		<style>
+		.announcement{
+			display: none;
+			background-color: tan;
+			margin-top: 40px;
+			font-size: 30px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<button>Let's go</button>
+
+	<div class="announcement">
+		<span>Whatever la da la dada</span>
+	</div>
+
+</body>
+<script>
+	$("button").click(function(){
+		$(".announcement").toggle();
+	});
+</script>
+
+</html>
