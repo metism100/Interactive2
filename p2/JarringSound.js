@@ -1,0 +1,68 @@
+// Click to randomize
+
+let canvas, ctx;
+
+let _hue, _scale, noiseScale, rot;
+let loopTime = 3000;
+
+function setup() {
+	canvas = createCanvas(windowWidth, windowHeight);
+	ctx = canvas.drawingContext;
+	
+	mouseClicked();
+}
+
+function draw(e) {
+	background(0);
+	
+	const _time = performance.now() % loopTime / loopTime;
+	const time = cos(_time * 0.5 * TAU);
+	
+	fill(255);
+	noStroke();
+	rect(0, height, _time * width, -4);
+	
+	translate(width * 0.5, height * 0.5);
+	rotate(rot);
+	
+	fill(`hsl(${(_hue + 180) % 360}, 100%, 50%)`);
+	
+	const r = min(width, height) * 0.3;
+	const count = 100;
+	const points = [];
+	for(let i = 0; i < count; i++) {
+		const t = i / count * TAU;
+		const v = createVector(noiseScale, 0).rotate(t);
+		const n = noise(v.x, v.y, time);
+		const p = createVector(r + map(n, 0, 1, -r, r), 0).rotate(t);
+		points.push(p.copy());
+		p.mult(_scale * n).rotate(QUARTER_PI);
+		circle(p.x, p.y, sin(t) * 10);
+	}
+	
+	stroke(`hsl(${_hue}, 100%, 50%)`);
+	strokeWeight(2);
+	noFill();
+	
+	for(let i = 0; i < 15; i++) {
+		beginShape();
+		for(const { x, y } of points) {
+			curveVertex(x, y);
+		}
+		endShape(CLOSE);
+		rotate(0.1);
+		scale(_scale);
+	}
+}
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+function mouseClicked() {
+	rot = random(TAU);
+	noiseSeed(random(100000));
+	_hue = floor(Math.random() * 360);
+	_scale = random(0.8, 0.98);
+	noiseScale = random(0.4, 1.5);
+}
