@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20vw;
+  font-weight: bold;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ddd;
+  filter: blur(1.1vw) saturate(0%) contrast(2000%);
+  animation: fade 1.5s ease-in-out infinite;
+}
+@-moz-keyframes fade {
+  0% {
+    color: #000;
+  }
+  3% {
+    color: #898989;
+  }
+  50% {
+    color: #898989;
+  }
+  99% {
+    color: #898989;
+  }
+  100% {
+    color: #000;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    color: #000;
+  }
+  3% {
+    color: #898989;
+  }
+  50% {
+    color: #898989;
+  }
+  99% {
+    color: #898989;
+  }
+  100% {
+    color: #000;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    color: #000;
+  }
+  3% {
+    color: #898989;
+  }
+  50% {
+    color: #898989;
+  }
+  99% {
+    color: #898989;
+  }
+  100% {
+    color: #000;
+  }
+}
+@keyframes fade {
+  0% {
+    color: #000;
+  }
+  3% {
+    color: #898989;
+  }
+  50% {
+    color: #898989;
+  }
+  99% {
+    color: #898989;
+  }
+  100% {
+    color: #000;
+  }
+}
