@@ -1,0 +1,379 @@
+html {
+	 height: 100%;
+	 min-height: 100%;
+}
+ button {
+	 position: fixed;
+	 bottom: 40px;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 background: white;
+	 border-radius: 50px;
+	 border: 10px solid #524d6a;
+	 padding: 25px 50px;
+	 font-size: 25px;
+	 letter-spacing: 3px;
+	 outline: none;
+	 transition: all ease 250ms;
+	 cursor: pointer;
+}
+ button:hover {
+	 transform: translateX(-50%) scale(1.1);
+	 letter-spacing: 5px;
+}
+ body {
+	 overflow: hidden;
+	 position: relative;
+	 height: 100%;
+	 width: 100%;
+	 background: #e3e1ea;
+}
+ .scene {
+	 width: 1000%;
+	 left: 50%;
+	 position: absolute;
+	 transform: translate(-50%, 0) scale(1);
+	 top: 50%;
+	 transition: all ease 2s;
+}
+ .scene.active {
+	 transform: translate(-50%, -50%) scale(0.02);
+	 animation: rotate ease 120s;
+	 animation-delay: 2s;
+}
+ .speed {
+	 position: absolute;
+	 width: 250px;
+	 height: 200px;
+	 left: 50%;
+	 top: 0;
+	 z-index: 2;
+	 transform: translateY(-100%);
+}
+ .speed span {
+	 background: linear-gradient(90deg, #e3e1ea 0 30%, #3c384d 90%);
+	 border-radius: 50px;
+	 display: block;
+	 position: absolute;
+	 height: 10px;
+	 animation: speed ease;
+	 animation-iteration-count: infinite;
+}
+ .speed span:nth-child(1) {
+	 width: 100%;
+	 left: 0%;
+	 top: 0%;
+	 animation-delay: 250ms;
+	 animation-duration: 600ms;
+}
+ .speed span:nth-child(2) {
+	 width: 50%;
+	 left: 50%;
+	 top: 38%;
+	 animation-delay: 50ms;
+	 animation-duration: 500ms;
+}
+ .speed span:nth-child(3) {
+	 width: 30%;
+	 left: 0;
+	 top: 60%;
+	 animation-duration: 250ms;
+}
+ .speed span:nth-child(4) {
+	 width: 60%;
+	 left: 5%;
+	 top: 20%;
+	 animation-delay: 250ms;
+	 animation-duration: 900ms;
+}
+ .smoke {
+	 position: absolute;
+	 width: 600px;
+	 height: 300px;
+	 left: calc(50% + 275px);
+	 top: 25px;
+	 transform: translateY(-100%) rotate(10deg);
+	 transform-origin: 0 50%;
+	 z-index: 1;
+	 animation: smoke ease-in-out 250ms;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+}
+ .smoke span {
+	 background: white;
+	 border-radius: 50%;
+	 position: absolute;
+}
+ .smoke span:nth-child(3) {
+	 width: 20%;
+	 height: 30%;
+	 display: block;
+	 bottom: 0;
+	 left: 6%;
+}
+ .smoke span:nth-child(4) {
+	 width: 50%;
+	 height: 50%;
+	 display: block;
+	 bottom: 0;
+	 left: 19%;
+}
+ .smoke span:nth-child(5) {
+	 width: 70%;
+	 height: 112%;
+	 display: block;
+	 bottom: -85px;
+	 left: 47%;
+	 transform: rotate(-25deg);
+}
+ .smoke span:nth-child(6) {
+	 width: 100%;
+	 height: 155%;
+	 display: block;
+	 bottom: 0;
+	 left: 85%;
+	 transform: rotate(-25deg);
+	 background: linear-gradient(80deg, white 20%, #e3e1ea 80%);
+}
+ .smoke span:nth-child(1) {
+	 width: 5%;
+	 height: 10%;
+	 display: block;
+	 bottom: 0;
+	 left: -20px;
+}
+ .smoke span:nth-child(2) {
+	 width: 10%;
+	 height: 20%;
+	 display: block;
+	 bottom: 0;
+}
+ .ground {
+	 width: 100%;
+	 padding-bottom: 100%;
+	 border-radius: 50%;
+	 background: #3c384d;
+	 position: relative;
+	 z-index: 3;
+}
+ .snail-wrapper {
+	 position: absolute;
+	 top: 5px;
+	 left: 50%;
+	 transform: translate(-50%, -100%);
+	 width: 400px;
+	 z-index: 2;
+}
+ .snail-wrapper .snail {
+	 width: 100%;
+	 padding-bottom: 100%;
+	 position: relative;
+}
+ .snail-wrapper .snail > * {
+	 position: absolute;
+}
+ .snail-wrapper .eyes {
+	 left: 10%;
+	 bottom: 10%;
+	 width: 10%;
+	 height: 10%;
+	 border-radius: 50px;
+	 background: #3c384d;
+}
+ .snail-wrapper .bottomchest {
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 15%;
+	 transform-origin: 100% 100%;
+	 border: 10px solid #3c384d;
+	 border-radius: 125px 125px 25px 25px;
+	 z-index: 5;
+	 animation: bottomchest ease 600ms;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+	 background: #524d6a;
+	 box-shadow: inset 0px 10px 0 0px rgba(60, 56, 77, 0.35);
+}
+ .snail-wrapper .shell {
+	 bottom: 10px;
+	 left: 30%;
+	 width: 60%;
+	 height: 60%;
+	 border-radius: 50%;
+	 animation: shell ease 600ms;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+	 transform-origin: 50% 100%;
+}
+ .snail-wrapper .shell.behind {
+	 z-index: 1;
+	 background: #524d6a;
+	 box-shadow: inset 25px 0px 0 rgba(60, 56, 77, 0.35), 0 0 0px 10px #3c384d;
+}
+ .snail-wrapper .shell.front {
+	 border-top: 10px solid transparent;
+	 border-left: 10px solid transparent;
+	 border-right: 10px solid transparent;
+	 border-bottom: 10px solid transparent;
+	 z-index: 6;
+}
+ .snail-wrapper .shell.front:before {
+	 width: 70%;
+	 height: 70%;
+	 position: absolute;
+	 border-radius: 50%;
+	 right: 10px;
+	 bottom: 10px;
+	 content: '';
+	 display: block;
+	 background: #524d6a;
+}
+ .snail-wrapper .shell.front .innershell {
+	 width: 70%;
+	 height: 70%;
+	 position: absolute;
+	 border-radius: 50%;
+	 right: -4px;
+	 bottom: 0;
+}
+ .snail-wrapper .shell.front .innershell:after {
+	 position: absolute;
+	 content: '';
+	 border-radius: 50%;
+	 z-index: 3;
+	 bottom: 0px;
+	 right: 0;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 border-left: 15px solid transparent;
+	 border-bottom: 15px solid transparent;
+	 border-right: 15px solid transparent;
+	 border-top: 15px solid #524d6a;
+	 top: -20px;
+	 left: -30px;
+}
+ .snail-wrapper .shell.front .innershell:before {
+	 z-index: 2;
+	 position: absolute;
+	 content: '';
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 50%;
+	 display: block;
+	 top: -20px;
+	 left: -24px;
+	 border-left: 10px solid #3c384d;
+	 border-bottom: 10px solid #3c384d;
+	 border-right: 10px solid #3c384d;
+	 border-top: 10px solid transparent;
+	 transform: rotate(70deg);
+}
+ .snail-wrapper .eyes {
+	 bottom: 9%;
+	 width: 10px;
+	 height: 20%;
+	 border-radius: 50px;
+	 background: #3c384d;
+	 transform-origin: 100% 100%;
+	 animation: eyes ease-in-out 600ms, eyes-translate ease 600ms;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+}
+ .snail-wrapper .eyes.right {
+	 z-index: 6;
+	 left: 5%;
+	 transform: rotate(65deg);
+}
+ .snail-wrapper .eyes.left {
+	 z-index: 1;
+	 left: 5%;
+	 animation-delay: 200ms;
+	 transform: rotate(40deg);
+}
+ .snail-wrapper .eyes:after {
+	 width: 200%;
+	 padding-bottom: 200%;
+	 border-radius: 50%;
+	 display: block;
+	 background: #3c384d;
+	 content: '';
+	 top: 0;
+	 position: absolute;
+	 z-index: 3;
+	 right: 0;
+	 transform: translate(0, 0);
+}
+ .snail-wrapper .eyes:before {
+	 content: '';
+	 width: 300%;
+	 padding-bottom: 300%;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: 0;
+	 left: 50%;
+	 display: block;
+	 background: white;
+	 transform: translate(-50%, -50%);
+	 border: 10px solid #3c384d;
+}
+ @keyframes bottomchest {
+	 from {
+		 transform: scale(1);
+	}
+	 to {
+		 transform: scale(1.02, 0.98);
+	}
+}
+ @keyframes shell {
+	 from {
+		 transform: scale(1.1, 0.9);
+	}
+	 to {
+		 transform: scale(1.15, 0.85);
+	}
+}
+ @keyframes eyes {
+	 from {
+		 transform: rotate(40deg);
+	}
+	 to {
+		 transform: rotate(10deg);
+	}
+}
+ @keyframes eyes-translate {
+	 from {
+		 left: 10%;
+	}
+	 to {
+		 left: 4%;
+	}
+}
+ @keyframes rotate {
+	 0% {
+		 transform: translate(-50%, -50%) scale(0.02) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) scale(0.02) rotate(-360deg);
+	}
+}
+ @keyframes smoke {
+	 0% {
+		 transform: translateY(-100%) rotate(10deg) scale(1, 1);
+	}
+	 100% {
+		 transform: translateY(-100%) rotate(12deg) scale(1.2, 1);
+	}
+}
+ @keyframes speed {
+	 0% {
+		 transform: translateX(0%);
+		 opacity: 1;
+	}
+	 100% {
+		 transform: translateX(200%);
+		 opacity: 0;
+	}
+}
+ 
