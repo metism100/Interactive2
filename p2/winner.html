@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Type out the word "winner".</p>
+
+<input type="text" size="40" onkeydown="myFunction(event)">
+
+<script>
+function myFunction(event) {
+  var x = event.key;
+
+  // If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
+  if (x == "a" || x == "A") { 
+    alert ("You pressed the 'A' key!");
+  }
+}
+</script>
+
+</body>
+</html>
