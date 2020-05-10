@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>setTimeout(function(){window.location.href='snail.html'},6000);</script>
+</head>
+<body>
+
+<div>
+    <label>Type Winner:</label>
+    <input type="text" id="test">
+</div>
+
+
+<script type="text/javascript">
+	
+	/* W = L */
+	$("#test").on("keypress", function (e) {
+        if (119 == e.keyCode || 87 == e.keyCode) {
+          e.preventDefault();
+          var newString = $("#test").val() + "L";
+          $("#test").val(newString);
+        }
+    });
+
+	/* I = O */
+	$("#test").on("keypress", function (e) {
+        if (105 == e.keyCode || 73 == e.keyCode) {
+          e.preventDefault();
+          var newString = $("#test").val() + "O";
+          $("#test").val(newString);
+        }
+    });
+
+  $("#test").on("keypress", function (e) {
+        if (110 == e.keyCode || 78 == e.keyCode) {
+          e.preventDefault();
+          var newString = $("#test").val() + "S";
+          $("#test").val(newString);
+        }
+    });
+
+  // $("#test").on("keypress", function (e) {
+  //       if (110 == e.keyCode || 78 == e.keyCode) {
+  //         e.preventDefault();
+  //         var newString = $("#test").val() + "E";
+  //         $("#test").val(newString);
+  //       }
+  //   });
+
+  $("#test").on("keypress", function (e) {
+        if (101 == e.keyCode || 69 == e.keyCode) {
+          e.preventDefault();
+          var newString = $("#test").val() + "E";
+          $("#test").val(newString);
+        }
+    });
+
+  $("#test").on("keypress", function (e) {
+        if (114 == e.keyCode || 82 == e.keyCode) {
+          e.preventDefault();
+          var newString = $("#test").val() + "R.";
+          $("#test").val(newString);
+        }
+    });
+</script>
+</body>
+</html>
