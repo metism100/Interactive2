@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+	<style type="text/css">
+		.circle{
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			background-color: red;
+			position: absolute;
+			bottom: 25px;
+			left: 225px;
+		}
+
+		.square{
+			height: 75px;
+			width: 75px;
+			background-color: blue;
+			position: absolute;
+			bottom: 25px;
+			left: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle"></div>
+	<div class="square"></div>
+
+	
+
+
+</body>
+
+<script type="text/javascript">
+		$(".circle").mouseenter(function() {
+			$(".square").fadeOut();
+	});
+
+		$(".circle").mouseleave(function() {
+		$(".square").fadeIn();
+	});
+</script>
+</html>
